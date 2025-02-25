@@ -1,0 +1,204 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --primary: #2B9B84;
+  --primary-dark: #1E7A68;
+  --white: #ffffff;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: var(--white);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #2B9B84 0%, #1e4d94 100%);
+  min-height: 400px;
+  padding: 4rem 5%;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-bar {
+  background: var(--white);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 50px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-bar input, .search-bar select {
+  border: none;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.search-bar select {
+  border-left: 1px solid #eee;
+}
+
+.search-bar button {
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  border: none;
+  background: #ff6b35;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* Services Section */
+.services {
+  padding: 4rem 5%;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card.highlighted {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  margin-bottom: 1rem;
+}
+
+/* Background Elements */
+.bg-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  nav {
+      display: none;
+  }
+  
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .search-bar {
+      flex-direction: column;
+      border-radius: 1rem;
+  }
+
+  .search-bar input, .search-bar select, .search-bar button {
+      width: 100%;
+      border-radius: 0.5rem;
+  }
+}
